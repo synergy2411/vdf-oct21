@@ -60,3 +60,6 @@ Object (hasOwnProperty, isValueOf, isPrototypeOf, constructor etc)
     - Function (call, apply bind)
     - Person (firstName, lastName , getFullName)
         personaA.lastName, personA.firstName, personaA.getFullName
+
+
+<!-- 203.112.156.83 -->
