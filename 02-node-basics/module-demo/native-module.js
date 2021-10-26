@@ -56,6 +56,9 @@
 // const http = require("http")
 
 // const server = http.createServer((request, response)=>{
+//     console.log("Method : ", request.method)
+//     console.log("URL : ", request.url)
+//     console.log("Headers : ", request.headers)
 //     response.writeHead(200)
 //     response.write("The Message is SUCCESS")
 //     response.end()
