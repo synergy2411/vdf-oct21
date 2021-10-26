@@ -81,3 +81,41 @@ Object (hasOwnProperty, isValueOf, isPrototypeOf, constructor etc)
 
 # to generate package.json
     - npm init
+
+# Various NPM Commands
+- npm install nodemon [-g]
+- npm config set/get
+- npm config get registry
+- npm config set author="sumit K"
+- npm install chalk@2.4.1
+- npm ls --depth 0
+- npm outdated
+- npm update
+- npm adduser
+- npm publish
+- npm init 
+- npm search <search-term>
+
+
+
+
+# Semantic Versioning
+X.Y.Z -> Major.Minor.Patch
+
+- Patch : update on bug fixes (1.0.0 -> 1.0.1)
+- Major : new features NOT compatible with existing codebase (1.0.0 -> 2.0.0)
+- Minor : new features added with backward compatibility (1.0.0 -> 1.1.0)
+
+^ - Patch Version
+~ - Minor Version
+
+Chalk - [
+    4.2.1
+    3.4.0
+    2.6.7 -
+    2.5.0
+    2.4.7 -
+    2.4.2
+    ~2.4.1
+    1.8.5
+]
