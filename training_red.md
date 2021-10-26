@@ -71,3 +71,13 @@ Object (hasOwnProperty, isValueOf, isPrototypeOf, constructor etc)
 - Microservices
 - Advt Server
 - File upload-download 
+
+
+# Notes App
+> node index.js add --title="New Title" --body="New Title Body"
+> node index.js read --title="Some Title"
+> node index.js remove --title="Some Title"
+> node index.js list
+
+# to generate package.json
+    - npm init
