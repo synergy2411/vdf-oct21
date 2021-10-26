@@ -1,3 +1,6 @@
+# Git repo link : https://github.com/synergy2411/vdf-oct21
+------------------------------------------------------------
+
 # What is JAVASCRIPT ? 
 - Scripting Language
 - Dynamic
@@ -61,5 +64,10 @@ Object (hasOwnProperty, isValueOf, isPrototypeOf, constructor etc)
     - Person (firstName, lastName , getFullName)
         personaA.lastName, personA.firstName, personaA.getFullName
 
-
-<!-- 203.112.156.83 -->
+# Application
+- Standalone App
+- Web Apps
+- REST API
+- Microservices
+- Advt Server
+- File upload-download 

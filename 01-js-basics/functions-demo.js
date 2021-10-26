@@ -6,6 +6,17 @@
 // Function creates Lexical Scope - binds with outer scope
 // Scope chaining
 
+// var y =101;
+
+// (function () {
+//     var x = 101;
+// })()
+
+// Block Scope - let /const
+
+
+
+
 // var x = 301;
 
 // function b(x){
