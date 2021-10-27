@@ -108,3 +108,20 @@
 // function callSomeFn(){
 //     console.log("Calling some function")
 // }
+
+
+
+
+(argsList) => {
+
+}
+
+() => "xyz"
+
+let arr = [1,2,3,4]
+let newArr1 = arr.map( value => value * 10)            // [10, 20, 30, 40]
+const newArr = filter(value => value > 2);          // [3,4]
+const item = find(value => value === 2)         // 2
+const position = findIndex(value => value === 2 )      // 1
+every
+some

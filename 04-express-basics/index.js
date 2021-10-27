@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 const todoCollection = [
-  { id: "t1", label: "to buy the jeans", status: "pending" },
+  { id: "t1", label: "to buy the jeans", status: "completed" },
   { id: "t2", label: "to buy the pulse", status: "completed" },
   { id: "t3", label: "to pot the plants", status: "pending" },
   { id: "t4", label: "to renew bike insurance", status: "completed" },
