@@ -163,3 +163,10 @@ https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_toke
 
 # DARKSKY API
 https://api.darksky.net/forecast/473fe696d21e65026547b2d50b56014c/37.8267,-122.4233
+
+
+
+vdiuser
+sd5VFZXeVsXFHKQs
+
+mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
