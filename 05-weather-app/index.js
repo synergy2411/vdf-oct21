@@ -1,4 +1,5 @@
 const express = require("express");
+const { getForecast } = require("./utils/forecast");
 const { getGeocode } = require("./utils/geocode");
 const app = express();
 
@@ -10,9 +11,17 @@ app.get("/", (req, res) => {
 app.get("/location", (req, res) => {
     const {location} = req.query;
     getGeocode(location)
-        .then(response => {
-            return res.send(response)
-            // make Call to Dark sky server
+        .then(({placeName, lat, lng}) => {
+            getForecast(lat, lng)
+            .then(({temperature, summary}) => {
+                let resp = {
+                    temperature,
+                    summary,
+                    placeName
+                }
+                console.log(resp);
+                return res.send(resp)
+            }).catch(err => res.send(err))
         })
         .catch(err => {
             return res.send(err)

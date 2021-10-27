@@ -33,6 +33,12 @@
                             </div>
                         </div>
                     </form>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-12">
+                            <p id="message"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,7 +53,12 @@
             }
             fetch("http://localhost:9000/location?location="+location)
                 .then(response => response.json())
-                .then(result => console.log("Server response : ", result))
+                .then(result => {
+                    $("#message").html(`
+                        Right now, Temperature is ${result.temperature} at the location ${result.placeName}
+                        It is anticipated that ${result.summary}!!
+                        `)
+                })
                 .catch(err => console.log(err))
           })  
         })
