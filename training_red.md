@@ -125,6 +125,29 @@ Chalk - [
 
 
 
+npm install nodemon -g
+
+nodemon index.js
+
+
+
+
+- npm init -y
+- npm install express axios
+- "dev" : "nodemon index.js"
+- npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
