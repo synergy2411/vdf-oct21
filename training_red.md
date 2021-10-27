@@ -119,3 +119,24 @@ Chalk - [
     ~2.4.1
     1.8.5
 ]
+
+
+# to install express - npm install express
+
+
+
+
+
+
+
+
+
+
+
+
+
+# MAPBOX API
+https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoic3luZXJneTI0MTEiLCJhIjoiY2p4NXc0cm53MDZoODQwbHFuNzdzMzV5NCJ9.DKIDo6bcG51yLXf2DmlYcQ
+
+# DARKSKY API
+https://api.darksky.net/forecast/473fe696d21e65026547b2d50b56014c/37.8267,-122.4233
