@@ -7,7 +7,7 @@ const MONGO_CLOUD_SRV = "mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.m
 let _db;
 
 const createTodo = () => {
-    _db.collection("todos").insert({label : "grocery", statue : false}, (err, res)=>{
+    _db.collection("todos").insert({label : "grocery", status : false}, (err, res)=>{
         if(err){
             console.log(err)
         }
@@ -22,12 +22,27 @@ const findTodo = () => {
     })
 }
 
+const deleteTodo = () => {
+    _db.collection("todos").deleteOne({label : 'shopping'}, (err, result) => {
+        console.log("DELETE : ", result)
+        findTodo()
+    })
+}
+
+const updateTodo = () => {
+    _db.collection("todos").updateOne({label : 'grocery'}, {$set : { status : true}}, (err, result)=>{
+        console.log("UPDATE : ", result)
+        findTodo();
+    })
+}
+
 MongoClient.connect(MONGO_CLOUD_SRV)
     .then(mongo => {
         _db = mongo.db('vdi-db')
         console.log("Mongo Cloud Connected...")
-        createTodo();
-        
+        // createTodo();
+        // deleteTodo()
+        updateTodo()
     }).catch(err => {
         console.log(err)
         process.exit(1)
