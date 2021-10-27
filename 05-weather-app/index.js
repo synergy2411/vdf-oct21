@@ -3,7 +3,10 @@ const { getForecast } = require("./utils/forecast");
 const { getGeocode } = require("./utils/geocode");
 const app = express();
 
-// http://localhost:9000
+// Serving the static files
+app.use(express.static(__dirname+'/public'))
+
+// http://localhost:9000/about
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
 })
