@@ -11,6 +11,8 @@ const todoCollection = [
   { id: "t4", label: "to renew bike insurance", status: "completed" },
 ];
 
+// CRUD REST API
+
 // http://localhost:9090/api/todos/:id {PATCH with Route Parameter and Req Body}
 app.patch("/api/todos/:id", (req, res) => {
   const { id } = req.params;
