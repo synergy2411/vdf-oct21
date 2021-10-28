@@ -17,6 +17,7 @@ describe("Expenses", () => {
   
     it("Should return sum of two numbers", () =>{
         chai.expect(sum(2,4)).to.be.eql(6)
+        
     })
 
 
