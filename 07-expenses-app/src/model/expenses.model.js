@@ -41,15 +41,15 @@ const expensesSchema = new Schema({
     }
 })
 
-expensesSchema.pre('save', function(next){
-    console.log("PRE: SAVE");
-    next();
-})
+// expensesSchema.pre('save', function(next){
+//     console.log("PRE: SAVE");
+//     next();
+// })
 
-expensesSchema.pre("validate", (next)=>{
-    console.log("PRE : VALIDATE")
-    next()
-})
+// expensesSchema.pre("validate", (next)=>{
+//     console.log("PRE : VALIDATE")
+//     next()
+// })
 
 // expensesSchema.post("save", (next) => {
 //     console.log("POST : SAVE")
