@@ -18,12 +18,26 @@ app.post('/api/login', (req, res) => {
     }
 })
 
-app.get('/api/protected', (req, res, next)=>{
-    console.log("Middleware works")
-    return res.send({message : "Stuck in middleware"})
-    next()
-}, (req, res) => {
-    res.send({message : "Success, Accessing protected API"})
+const ensureToken = (req, res, next) => {
+    const authHeader = req.headers.authorization
+    if(authHeader){
+        const token = authHeader.split(' ')[1];
+        req.token = token;
+        next();
+    }else{
+        return res.send({message : 'Auth Header not available'})
+    }
+}
+
+app.get('/api/protected', ensureToken, (req, res) => {
+    jwt.verify(req.token, MY_SECRET_KEY, (err, decode)=>{
+        if(err){
+            console.log(err);
+            process.exit(1)
+        }
+        console.log("DECODE : ", decode)
+        res.send({message : "Success, Accessing protected API"})
+    })
 })
 
 app.listen(3030, () => console.log("Server started at PORT : 3030"))
