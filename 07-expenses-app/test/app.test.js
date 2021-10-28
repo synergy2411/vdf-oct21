@@ -3,7 +3,7 @@ const chai = require("chai");
 const chaiHttp = require("chai-http");
 const ExpensesModel = require("../src/model/expenses.model");
 const server = require('../src/server');
-
+const { sum } = require("../src/utils/math")
 // describe() - Test Suite
 // it() - Test Spies
 
@@ -15,6 +15,11 @@ describe("Expenses", () => {
         await ExpensesModel.deleteMany()
     })
   
+    it("Should return sum of two numbers", () =>{
+        chai.expect(sum(2,4)).to.be.eql(6)
+    })
+
+
     it("/GET - should fetch all expenses", (done) =>{
         chai.request(server)
             .get('/expenses')
