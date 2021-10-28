@@ -199,9 +199,20 @@ mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabas
 - Mocha : Testing Framework : npm install mocha -g
 - Chai : Assertion Library
 
+- npm i cors
+
 # Heroku Cloud
-- make app deployment read
-- Download Heroku CLI
+- Make app deployment ready
+    : package.json - "start" : "node src/index.js"
+    : PORT = process.env.PORT || 9001
+    : CORS installed
+- Download and installed Heroku CLI
 - heroku login
 - heroku keys : add
-- heroku deploy
+    > Powershell - ssh-keygen
+- heroku create <unique-project-name> vdi-expenses
+- Committed all code to GIT 
+- Committed all code to heroku
+    > git push heroku main
+
+# Deployed URL - https://vdi-expenses-app.herokuapp.com/expenses
