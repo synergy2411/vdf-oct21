@@ -186,3 +186,8 @@ mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabas
 
 - /api/login [POST] - username & password -> Authenticated USER
 - /api/protected [GET] - can be accesed by Authenticated USER 
+
+
+# View Engine
+- Dynamic template
+- Reusability of template

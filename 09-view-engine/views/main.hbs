@@ -1,0 +1,28 @@
+{{> header}}
+<div class="container">
+<ul class="list-group">
+    {{#each posts}}
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-4">
+                <img src="{{this.image}}" class="rounded-circle">
+            </div>
+            <div class="col-8">
+                <h3>Author : {{this.author}} </h3>
+                {{#if this.comments}}
+                <ul>
+                {{#each this.comments}}
+                    <li>
+                    {{this}}
+                    </li>
+                {{/each}}
+                </ul>
+                {{else}}
+                <p>Be the first to comment on this.</p>
+                {{/if}}
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+</div>
