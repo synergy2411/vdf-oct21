@@ -172,3 +172,17 @@ sd5VFZXeVsXFHKQs
 mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 - npm install express mongoose
+
+# REST API
+/GET - fetch all Items
+/POST - Create new Item
+/GET/{id} - fetching single Item
+/DELETE/{id} - Deleting single element
+/PATCH/{id} - Updating the single Item
+
+
+# JWT Token / API Authentication
+- npm install jsonwebtoken express
+
+- /api/login [POST] - username & password -> Authenticated USER
+- /api/protected [GET] - can be accesed by Authenticated USER 
