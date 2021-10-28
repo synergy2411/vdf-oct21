@@ -170,3 +170,5 @@ vdiuser
 sd5VFZXeVsXFHKQs
 
 mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+- npm install express mongoose

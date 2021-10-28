@@ -17,6 +17,18 @@ const createExpenses = (req, res) => {
     })
 }
 
+const findExpenseById = (req, res) => {
+    const {id} = req.params;
+    ExpensesModel.findById(id)
+        .then(response => {
+            return res.send(response)
+        })
+        .catch(err => {
+            return res.send(err)
+        })
+}
+
+
 module.exports = {
-    findAllExpenses, createExpenses
+    findAllExpenses, createExpenses, findExpenseById
 }
