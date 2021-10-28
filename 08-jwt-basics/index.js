@@ -11,7 +11,7 @@ app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
     // Verify the user from Database
     if(username && password){
-        const token = jwt.sign({username, password}, MY_SECRET_KEY)
+        const token = jwt.sign({username, password}, MY_SECRET_KEY, { expiresIn : '2h'})
         return res.send({token})
     }else{
         return res.send({message : "Username and/or Password not found"})
