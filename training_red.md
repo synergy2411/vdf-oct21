@@ -191,3 +191,17 @@ mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabas
 # View Engine
 - Dynamic template
 - Reusability of template
+
+
+
+# API Testing
+- Postman Tool 
+- Mocha : Testing Framework : npm install mocha -g
+- Chai : Assertion Library
+
+# Heroku Cloud
+- make app deployment read
+- Download Heroku CLI
+- heroku login
+- heroku keys : add
+- heroku deploy
