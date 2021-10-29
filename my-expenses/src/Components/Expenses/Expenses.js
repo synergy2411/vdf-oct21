@@ -1,3 +1,4 @@
+import ExpenseForm from "./ExpenseForm";
 import ExpenseItem from "./ExpenseItem";
 
 const Expenses = () => {
@@ -10,6 +11,9 @@ const Expenses = () => {
     return (
         <div>
             <p className="text-center display-4">My Expenses</p>
+            <br/>
+            <ExpenseForm />
+            <br/> <hr/>
             <div className="row">
                 <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} createdAt={expenses[0].createdAt} id={expenses[0].id} />
                 <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} createdAt={expenses[1].createdAt} id={expenses[1].id} />

@@ -1,3 +1,5 @@
+import ExpenseDate from "./ExpenseDate";
+
 const ExpenseItem = (props) => {
   return (
     <div className="col-sm-6 col-md-4">
@@ -7,7 +9,7 @@ const ExpenseItem = (props) => {
         </div>
         <div className="card-body">
           <p>Amount : ${props.amount}</p>
-          <p>Created At: {props.createdAt.toISOString()}</p>
+          <ExpenseDate createdAt = {props.createdAt} />
         </div>
       </div>
     </div>

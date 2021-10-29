@@ -230,6 +230,13 @@ mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabas
 - Hooks : introduced in v16.8, useState, useEffect, useReducer, useContext, useParams etc
 - CLI Tool - create-react-app
 - npx create-react-app my-expenses
+- npm install bootstrap@4
+
+- Controlled : react manages the state
+- Uncontrolled : browser manages the state
+
+
+
 
 
 - SPA vs MPA
