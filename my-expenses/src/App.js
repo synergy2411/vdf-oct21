@@ -7,7 +7,6 @@ function App() {
   
   return (
     <div className="container">
-      <h3>Dummy text</h3>
       <Expenses />
     </div>
   );
