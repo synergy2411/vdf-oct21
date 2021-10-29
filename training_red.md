@@ -241,7 +241,16 @@ mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabas
 : useEffect(callbackFn, [deps]) - re-render every time whenever mentioned dependencies changed
 
 
+# Firebase Cloud Deployment
+ - Gmail credentials
+ - Create project on firebase console
+ - npm install firebase-tools -g
+ - npm run build -> /build
+ - firebase login
+ - firebase init
+ - firebase deploy
 
+ # Deployed React App -  https://vdi-expenses-app.web.app
 
 
 
