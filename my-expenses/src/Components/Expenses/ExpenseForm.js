@@ -12,6 +12,8 @@ const ExpenseForm = props => {
     const submitHandler = event => {
         event.preventDefault();
         props.addNewExpense({title, amount, createdAt})
+        props.showExpenseForm();
+        setTitle(''); setAmount(''); setCreatedAt('');
     }
 
     return (

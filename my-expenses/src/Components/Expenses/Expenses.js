@@ -32,17 +32,31 @@ const Expenses = () => {
 
     const addNewExpense = ({title, amount, createdAt}) => {
         let expense = {
-            id : `p${expenses.length+1}`,
             title,
             amount : Number(amount), 
-            createdAt : new Date(createdAt)
+            createdAt : new Date(createdAt).toISOString()
         }
-        setExpenses(prevState => {
-            return [expense, ...prevState]
-        })
+        axios.post("https://vdi-expenses-app.herokuapp.com/expenses", expense)
+            .then(response => {
+                console.log(response)
+                const {_id, title, amount, createdAt} = response.data;
+                const expense = { 
+                    id: _id, title, amount, createdAt : new Date(createdAt)
+                }
+                setExpenses((prevState) => {
+                    return [expense, ...prevState]
+                })
+            }).catch(err=>console.log(err))
     }
     const showExpenseForm = () => {
         setShowForm(!showForm)
+    }
+    const deleteExpense = id => {
+        axios.delete("https://vdi-expenses-app.herokuapp.com/expenses/"+id)
+            .then(response => {
+                const filteredExpenses = expenses.filter(exp => exp.id !== id)
+                setExpenses(filteredExpenses)
+            }).catch(err=>console.log(err))
     }
     return (
         <div>
@@ -55,11 +69,11 @@ const Expenses = () => {
                 </div>
             </div>
             <br/>
-            { showForm && <ExpenseForm addNewExpense = {addNewExpense}/>}
+            { showForm && <ExpenseForm showExpenseForm={showExpenseForm} addNewExpense = {addNewExpense}/>}
             <br/> <hr/>
             <div className="row">
                 {expenses.map(expense => {
-                    return <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} createdAt={expense.createdAt} id={expense.id} />
+                    return <ExpenseItem deleteExpense={deleteExpense} key={expense.id} title={expense.title} amount={expense.amount} createdAt={expense.createdAt} id={expense.id} />
                 })}
             </div>
         </div>
