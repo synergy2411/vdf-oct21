@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
+
 
 const ExpenseForm = props => {
     const [title, setTitle] = useState('')
@@ -17,6 +18,8 @@ const ExpenseForm = props => {
     }
 
     return (
+        <Fragment>
+        
         <div className="row">
             <div className="col-8 offset-2">
                 <div className="card">
@@ -66,6 +69,7 @@ const ExpenseForm = props => {
                 </div>
             </div>
         </div>
+        </Fragment>
     )
 }
 

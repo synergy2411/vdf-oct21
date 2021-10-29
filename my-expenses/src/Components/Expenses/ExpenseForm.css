@@ -1,0 +1,16 @@
+.backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
+    left : 0px;
+    top: 0px;
+    z-index: 50%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+.my-form{
+    background-color: white;
+    margin-left: 25vw;
+    margin-top: 20vh;
+    z-index: 70%;
+    position: fixed;
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 import ExpenseForm from "./ExpenseForm";
 import ExpenseItem from "./ExpenseItem";
+import './ExpenseForm.css';
 
 // const MOCK_EXPENSES = [
 //     { id : "p1", title : "grocery", amount : 12.99, createdAt : new Date(2021, 2, 10)},
@@ -69,7 +70,8 @@ const Expenses = () => {
                 </div>
             </div>
             <br/>
-            { showForm && <ExpenseForm showExpenseForm={showExpenseForm} addNewExpense = {addNewExpense}/>}
+            {showForm && <div className="backdrop"></div>}
+            { showForm && <ExpenseForm className="my-form" showExpenseForm={showExpenseForm} addNewExpense = {addNewExpense}/>}
             <br/> <hr/>
             <div className="row">
                 {expenses.map(expense => {
