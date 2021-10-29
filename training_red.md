@@ -216,3 +216,36 @@ mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabas
     > git push heroku main
 
 # Deployed URL - https://vdi-expenses-app.herokuapp.com/expenses
+
+
+# What is React?
+- Cient-side JavaScript Library
+- For building UI (Fast and Efficient)
+- Single Page Application (react-router)
+- Sponsured by Facebook Team
+- Virtual DOM : Pure JavaScript representation of REAL DOM, in-memory
+- Component Based Architecture : reusable piece of code, creates the UI
+- Props : Parent-Child Component Communication
+- State : Create the component dynamic
+- Hooks : introduced in v16.8, useState, useEffect, useReducer, useContext, useParams etc
+- CLI Tool - create-react-app
+- npx create-react-app my-expenses
+
+
+- SPA vs MPA
+    : Make UI interactive - SPA
+    : reloading the complete page - MPA
+    : Consuming Network bandwidth - MPA
+
+HTML, CSS, JS -> DOM -> Browser
+
+JSX -> JavaScript -> Virtual DOM -> Real DOM -> Displayed to User
+
+JSX -> HTML-ish type language
+
+# Atomic Web Design
+- Atoms : smallest unit, one button, one input field, 
+- Molecules : Combo of Atoms -> one button + one input field -> Searchbar
+- Organism : Combo of Molecules -> header -> Links + Searchbar
+- Templates : Combo of Organism -> complete form
+- Pages : combo of various templates
