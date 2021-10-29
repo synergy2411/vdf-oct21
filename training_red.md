@@ -235,6 +235,26 @@ mongodb+srv://vdiuser:sd5VFZXeVsXFHKQs@cluster0.e9xsq.mongodb.net/myFirstDatabas
 - Controlled : react manages the state
 - Uncontrolled : browser manages the state
 
+- useEffect() : run side-effect code
+: useEffect(callbackFn) - re-render always whenever the state changes
+: useEffect(callbackFn, []) - render only once at the time of component loading
+: useEffect(callbackFn, [deps]) - re-render every time whenever mentioned dependencies changed
+
+
+
+
+
+
+
+
+
+
+- React - building the UI
+- side-effects - making XHR call, timers, setting the state etc etc
+
+
+
+
 
 
 
